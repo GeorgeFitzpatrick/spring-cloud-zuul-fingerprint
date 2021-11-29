@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2021 George Fitzpatrick
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.georgefitzpatrick.cloud</groupId>
+    <artifactId>spring-cloud-zuul-fingerprint</artifactId>
+    <name>Passive fingerprinting and rate limiting configuration for Spring Cloud Netflix Zuul</name>
+    <description>
+        <![CDATA[
+            This project is a Spring Cloud Netflix Zuul passive fingerprinting and rate limit strategy.
+        ]]>
+    </description>
+    <url>https://github.com/GeorgeFitzpatrick/spring-cloud-zuul-fingerprint</url>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <java.version>14</java.version>
+        <maven.compiler.source>14</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>GeorgeFitzpatrick</id>
+            <email>15FitzpatrickG@bartoncourt.org</email>
+            <name>George Fitzpatrick</name>
+            <timezone>GMT</timezone>
+        </developer>
+    </developers>
+
+    <scm></scm>
+
+    <dependencyManagement></dependencyManagement>
+
+    <modules>
+        <module>spring-cloud-starter-zuul-fingerprint</module>
+        <module>spring-cloud-zuul-fingerprint-core</module>
+        <module>spring-cloud-zuul-fingerprint-example</module>
+    </modules>
+
+    <dependencies></dependencies>
+
+    <build></build>
+
+    <distributionManagement></distributionManagement>
+
+    <profiles></profiles>
+
+</project>

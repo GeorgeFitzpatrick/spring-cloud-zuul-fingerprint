@@ -1,0 +1,4 @@
+# Project exclude paths
+/spring-cloud-starter-zuul-fingerprint/target/
+/spring-cloud-zuul-fingerprint-core/target/
+/spring-cloud-zuul-fingerprint-example/target/

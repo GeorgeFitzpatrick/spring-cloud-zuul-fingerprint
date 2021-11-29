@@ -1,0 +1,45 @@
+logging:
+  level:
+    root: debug
+
+server:
+  port: 443
+  http2:
+    enabled: true
+  ssl:
+    enabled: true
+    enabled-protocols: TLSv1.2,TLSv1.3
+    key-store-type: PKCS12
+    key-store: classpath:keystore.p12
+    key-store-password: ?UqoV!!rava6Wo2@602&
+    key-alias: jetty
+
+spring:
+  redis:
+    port: 6379
+
+ribbon:
+  eureka:
+    enabled: false
+
+zuul:
+  routes:
+    default:
+      path: /
+      url: https://jsonplaceholder.typicode.com/todos/1
+  fingerprint:
+    enabled: true
+    filter-order: 0
+    behind-proxy: false
+    score-weights:
+      '0.5': 2
+    policies:
+      - limit: 6
+        refresh: PT1M
+        penalties:
+          '5': PT10M
+          '10': PT30M
+          '15': PT2H
+          '20': PT6H
+          '25': PT12H
+          '30': P1D
